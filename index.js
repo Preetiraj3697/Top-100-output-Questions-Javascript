@@ -1,3 +1,5 @@
+/** @format */
+
 // console.log("hello world")
 //===============================//
 //1
@@ -112,7 +114,7 @@
 //==============================//
 //21
 // console.log('🧡'==='🧡') // true
-//emoji have unique code 
+//emoji have unique code
 
 //==============================//
 //22
@@ -159,12 +161,64 @@
 
 //==============================//
 //27
+// const name = "I am full stack web developer";
+// console.log(!typeof name === "object"); //false
+// console.log(!typeof name === "string"); //false
 
+//==============================//
+//28
+// const name = "Subscribe";
+// const age = 21;
 
+// console.log(isNaN(name));//true
+// console.log(isNaN(age)); //false
 
+//==============================//
+//29
+// let person = {name:"Preeti"};
+// //what can modify person object;
+// Object.seal(person);
+// person.name="Paarthav";
+// console.log(person); // {name: 'Paarthav'}
 
+//==============================//
+//30
+// let data = [2,9,5,3];
+// //remove first element;
+// data.shift();
+// console.log(data); // [9, 5, 3]
+//==============================//
+//31
+// let data = [2,9,5,3];
+// //remove last element;
+// data.pop();
+// console.log(data); // [2,9,5]
+//==============================//
+//32
+//check any value is odd or even
+// let num = 24;
+// if(num%2===0){
+//     console.log("even")
+// }else{
+//     console.log("odd");
+// }
+// //answer is even
+//==============================//
+//33
+// let data={
+//     name:"anil"
+// }
+// delete data;
+// console.log(data); // {name: 'anil'}
 
+//==============================//
+//34
+// let data = "true";
+// //convert data to boolean false value
+// console.log(typeof !data); //boolean
 
-
-
-
+//==============================//
+//35
+let data = "true";
+//convert data to boolean true value
+console.log(typeof !!data); //boolean
