@@ -98,5 +98,51 @@
 // const name = "Anil";
 // console.log(name()); // index.js:98 Uncaught TypeError: name is not a function
 //==============================//
+//18
+// const result = null || false || '';
+// console.log(result); // ''
+// if not have any positive value than or operator take last value
+//==============================//
+//19
+// console.log(Promise.resolve(5));  // Promise {<fulfilled>: 5}
+//==============================//
+//20
+// const result = [] || 0 || true;
+// console.log(result); //[]
+//==============================//
+//21
+// console.log('🧡'==='🧡') // true
+//emoji have unique code 
+
+//==============================//
+//22
+//JSON.parse();
+//What this method will do
+// A: Parses JSON to a Javascript Value
+// B: Parses a Javascript object to JSON
+// C: Parses any Javascript value to JSON
+// D: Parses JSON to a JavaScript OBject only
+// answer is A.
+
+//==============================//
+//23
+// let name = 'Preeti';
+// function getName(){
+//     console.log(name); // Uncaught ReferenceError: Cannot access 'name' before initialization
+//     let name = 'anil';
+// }
+// getName();
+
+//==============================//
+//24
+// let name = 'Preeti';
+// function getName(){
+//     console.log(name); // Preeti
+// }
+// getName();
+
+//==============================//
+//25
+
 
 
