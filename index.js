@@ -29,5 +29,34 @@
 // console.log(typeof NaN); //number
 //==============================//
 //6
-let data = 10 - -10;
-console.log(data); //20
+// let data = 10 - -10;
+// console.log(data); //20
+//==============================//
+//7
+
+// const set = new Set([1,2,2,3,4,4,5]);
+// console.log(set); //Set(5) {1, 2, 3, 4, 5}
+
+//==============================//
+//8
+// let data = {name:"Anil"};
+// console.log(delete data.name); //true
+// console.log(data); //{}
+
+//==============================//
+//9
+// const data ={name:"anil"};
+// console.log(delete data); // false
+// console.log(data); // {name: 'anil'}
+
+//==============================//
+//10
+// const data = ['Peter','anil','sam'];
+// const [y] = data;
+// console.log(y); //Peter
+//==============================//
+//11
+// const data = ['Peter','anil','sam'];
+// const [,y] = data; //how to get second value without first value
+// console.log(y); //anil
+//==============================//
