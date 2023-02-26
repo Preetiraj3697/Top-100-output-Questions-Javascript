@@ -143,6 +143,28 @@
 
 //==============================//
 //25
+// console.log(`${(x=>x)('I Love')} to Program`) // I Love to Program
+
+//==============================//
+//26
+// function sumValues(x,y,z){
+//     return x+y+z;
+// }
+//A: sumValues([...1,2,3]);
+//B: sumValues([...[1,2,3]]);
+//C: sumValues(...[1,2,3]);
+//D: sumValues([1,2,3]);
+// console.log(sumValues(...[1,2,3])) //6
+//answer is B;
+
+//==============================//
+//27
+
+
+
+
+
+
 
 
 
