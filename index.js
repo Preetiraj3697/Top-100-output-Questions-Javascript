@@ -60,3 +60,43 @@
 // const [,y] = data; //how to get second value without first value
 // console.log(y); //anil
 //==============================//
+//12
+// const data = {name:"anil",age:29,skill:"JS"};
+// const {name} = data;
+// const {age} = data;
+// console.log(name); //anil
+// console.log(age); //29
+//how to get name property without . operator
+//==============================//
+//13
+// let data = {name:"anil", age:29, skill:"JS"};
+// let info = {city:"Noida", mail:"anil@test.com"};
+// data = {...data,...info}
+// // merge 2 object
+// console.log(data) // {name: 'anil', age: 29, skill: 'JS', city: 'Noida', mail: 'anil@test.com'}
+//==============================//
+//14
+// let data = {name:"anil", age:29, skill:"JS"};
+// let info = {city:"Noida",};
+// data = {data,...info}
+// // merge 2 object
+// console.log(data) // {data:  {name: 'anil', age: 29, skill: 'JS'}, city: 'Noida'}
+//==============================//
+//15
+// let data = {name:"anil", age:29, skill:"JS"};
+// let info = {city:"Noida", skill:"NodeJs"};
+// data = {...data,...info}
+// // merge 2 object
+// console.log(data) // {name: 'anil', age: 29, skill: 'NodeJs', city: 'Noida'}
+//==============================//
+//16
+// const result = false || {} || null;
+// console.log(result); // {}
+//first positive value take || or operator
+//==============================//
+//17
+// const name = "Anil";
+// console.log(name()); // index.js:98 Uncaught TypeError: name is not a function
+//==============================//
+
+
