@@ -395,3 +395,344 @@
 // console.log(number++); // 0
 // console.log(++number); // 2
 // console.log(number); // 2
+//==============================//
+//66
+// function getAge(...args){
+//     console.log(args); // [21];
+//     console.log(typeof args); //object
+// }
+// getAge(21);
+//==============================//
+//67
+// function getAge(){
+//     'use strict'
+//     age = 21;
+//     console.log(age); // age is not defined at getAge 
+// }
+// getAge();
+//==============================//
+//68
+// const sum = eval('10*10+5');
+// console.log(sum); // 105;
+//==============================//
+//69
+// How long is cool_secret assessbile?
+// sessionStorage.setItem('cool_secret',123);
+// The data stored in sessionStorage is removed after closing the tab.
+// If you used localStorage, the data would've been there forever, unless for example localStorage.clear() is invoked.
+//==============================//
+//70
+// function sayHi() {
+//   console.log(name); // undefined
+//   console.log(age); // Error
+//   var name = 'Lydia';
+//   let age = 21;
+// }
+
+// sayHi();
+// D: undefined and ReferenceError
+//==============================//
+//71
+// for (var i = 0; i < 3; i++) {
+//     setTimeout(() => console.log(i), 1); // 3, 3, 3
+//   }
+  
+//   for (let i = 0; i < 3; i++) {
+//     setTimeout(() => console.log(i), 1); // 0, 1, 2
+//   }
+  // C: 3 3 3 and 0 1 2
+//==============================//
+//72
+// const shape = {
+//     radius: 10,
+//     diameter() {
+//       return this.radius * 2;
+//     },
+//     perimeter: () => 2 * Math.PI * this.radius,
+//   };
+  
+//   console.log(shape.diameter()); // 20
+//   console.log(shape.perimeter()); //NaN
+  // B: 20 and NaN
+//==============================//
+//73
+// console.log(+true); // 1
+// console.log(!!'Lydia'); //true
+//==============================//
+//74
+// const bird = {
+//     size: 'small',
+//   };
+  
+//   const mouse = {
+//     name: 'Mickey',
+//     small: true,
+//   };
+//   console.log(mouse.bird.size) //not valid
+//   console.log(mouse[bird.size]) //true
+//   console.log(mouse[bird["size"]]) //true
+//   A: mouse.bird.size is not valid
+//   B: mouse[bird.size] is not valid
+//   C: mouse[bird["size"]] is not valid
+//   D: All of them are valid
+ //Answer A: mouse.bird.size is not valid
+//==============================//
+//75
+
+// class Chameleon {
+//     static colorChange(newColor) {
+//       this.newColor = newColor;
+//       return this.newColor;
+//     }
+  
+//     constructor({ newColor = 'green' } = {}) {
+//       this.newColor = newColor;
+//     }
+//   }
+  
+//   const freddie = new Chameleon({ newColor: 'purple' });
+//   console.log(freddie.colorChange('orange'));
+
+  // D: TypeError
+  // The colorChange function is static. Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children. Since freddie is a child, the function is not passed down, and not available on the freddie instance: a TypeError is thrown.
+
+  //==============================//
+//76
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+  
+//   const member = new Person('Lydia', 'Hallie');
+//   Person.getFullName = function() {
+//     return `${this.firstName} ${this.lastName}`;
+//   };
+  
+//   console.log(member.getFullName());
+//   Answer: A TypeError
+// You can't add properties to a constructor like you can with regular objects. If you want to add a feature to all objects at once, you have to use the prototype instead. So in this case,
+
+// Person.prototype.getFullName = function() {
+//   return `${this.firstName} ${this.lastName}`;
+// };
+// would have made member.getFullName() work. Why is this beneficial? Say that we added this method to the constructor itself. Maybe not every Person instance needed this method. This would waste a lot of memory space, since they would still have that property, which takes of memory space for each instance. Instead, if we only add it to the prototype, we just have it at one spot in memory, yet they all have access to it!
+
+
+//==============================//
+//77
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+  
+//   const lydia = new Person('Lydia', 'Hallie');
+//   const sarah = Person('Sarah', 'Smith');
+  
+//   console.log(lydia); // Person {firstName: "Lydia", lastName: "Hallie"}
+//   console.log(sarah); // undefined
+  // A: Person {firstName: "Lydia", lastName: "Hallie"} and undefined
+//==============================//
+//78
+// . What are the three phases of event propagation?
+// A: Target > Capturing > Bubbling
+// B: Bubbling > Target > Capturing
+// C: Target > Bubbling > Capturing
+// D: Capturing > Target > Bubbling
+// Answer: D
+// During the capturing phase, the event goes through the ancestor elements down to the target element. It then reaches the target element, and bubbling begins.
+//==============================//
+//79
+// All object have prototypes.
+// A: true
+// B: false
+// Answer: B
+// All objects have prototypes, except for the base object. The base object is the object created by the user, or an object that is created using the new keyword. The base object has access to some methods and properties, such as .toString. This is the reason why you can use built-in JavaScript methods! All of such methods are available on the prototype. Although JavaScript can't find it directly on your object, it goes down the prototype chain and finds it there, which makes it accessible for you.
+
+//==============================//
+//80
+// function getPersonInfo(one, two, three) {
+//     console.log(one); // ['', ' is ', ' years old', raw: Array(3)]
+//     console.log(two); // Lydia
+//     console.log(three); // 21
+//   }
+  
+//   const person = 'Lydia';
+//   const age = 21;
+  
+//   getPersonInfo`${person} is ${age} years old`;
+  // Answer: B: ["", " is ", " years old"] "Lydia" 21
+  // If you use tagged template literals, the value of the first argument is always an array of the string values. The remaining arguments get the values of the passed expressions!
+
+//==============================//
+//81
+// function checkAge(data) {
+//     if (data === { age: 18 }) {
+//       console.log('You are an adult!');
+//     } else if (data == { age: 18 }) {
+//       console.log('You are still an adult.');
+//     } else {
+//       console.log(`Hmm.. You don't have an age I guess`);
+//     }
+//   }
+  
+//   checkAge({ age: 18 });  // Hmm.. You don't have an age I guess
+//When testing equality, primitives are compared by their value, while objects are compared by their reference. JavaScript checks if the objects have a reference to the same location in memory.
+// The two objects that we are comparing don't have that: the object we passed as a parameter refers to a different location in memory than the object we used in order to check equality.
+// This is why both { age: 18 } === { age: 18 } and { age: 18 } == { age: 18 } return false.
+//==============================//
+//82
+
+// const obj = { 1: 'a', 2: 'b', 3: 'c' };
+// const set = new Set([1, 2, 3, 4, 5]);
+
+// obj.hasOwnProperty('1');
+// obj.hasOwnProperty(1);
+// set.has('1');
+// set.has(1);
+// C: true true false true
+// All object keys (excluding Symbols) are strings under the hood, even if you don't type it yourself as a string. This is why obj.hasOwnProperty('1') also returns true.
+// It doesn't work that way for a set. There is no '1' in our set: set.has('1') returns false. It has the numeric type 1, set.has(1) returns true.
+//==============================//
+//83
+// const obj = { a: 'one', b: 'two', a: 'three' };
+// console.log(obj); // {a: 'three', b: 'two'}
+//==============================//
+//84
+// for(let i=1; i<5; i++){
+//     if(i===3) continue;
+//     console.log(i); // 1,2,4
+// }
+//==============================//
+//85
+// const foo = () => console.log("First");
+// const bar = () => setTimeout(()=>console.log("Second"));
+// const baz = () => console.log('Third');
+// bar();
+// foo();
+// baz();
+//First
+// Third
+// Second
+//==============================//
+//86
+{/* <div>
+<div onclick="console.log('first div')">
+    <div onclick="console.log('second div')">
+        <button onclick="console.log('button')">
+            Click!
+        </button>
+    </div>
+</div>
+</div> */}
+//button
+//second div
+//first div
+//==============================//
+//87
+// const person = {name:'anil'};
+// function sayHi(age){
+//     return `${this.name} is ${age}`;
+// }
+// console.log(sayHi.call(person,21)); // anil is 21
+// console.log(sayHi.bind(person,21)); 
+// // sayHi(age){
+// //     return `${this.name} is ${age}`;
+// // }
+// console.log(sayHi.bind(person,21)());  // anil is 21
+
+//==============================//
+//88
+// function sayHi(){
+//     return (()=>0)();
+// }
+// console.log(typeof sayHi()); //number
+//==============================//
+//89
+// function sayHi(){
+//  return () => 0;
+// }
+// console.log(typeof sayHi()); //function;
+// console.log(typeof sayHi()()); //number;
+
+//==============================//
+//90
+// console.log(typeof typeof 1); // string
+//==============================//
+//91
+// const numbers = [1,2,3];
+// numbers[6] =11;
+// console.log(numbers); // (7) [1, 2, 3, empty × 3, 11]
+//==============================//
+//92
+// const numbers = [1,2,3];
+// numbers[9] = numbers;
+// console.log(numbers); // Infinity array add in position at 9 position.
+//==============================//
+//93
+// Everythibg is Javascript is either a...
+// A: primitive or object
+// B: function or object
+// c: Trick question only objects
+// D: number or object
+// answer is A;
+//==============================//
+//94
+// console.log(!!null); //false
+// console.log(!!""); //false
+// console.log(!!1); // true
+
+//==============================//
+//95
+// console.log(setInterval(()=>console.log("HI"),1000));
+// console.log(setInterval(()=>console.log("HI"),1000));
+// console.log(setInterval(()=>console.log("HI"),1000));
+
+//==============================//
+//96
+// console.log([...'anil']); //(4) ['a', 'n', 'i', 'l']
+
+//==============================//
+//97
+// const firstPromise = new Promise((res,rej)=>{
+//     setTimeout(res,500,'one');
+// });
+// const secondPromise = new Promise((res,rej)=>{
+//     setTimeout(res,100,'two');
+// });
+// Promise.race([firstPromise,secondPromise]).then(res=>console.log(res)); // two
+//==============================//
+//98
+// let person = {name:'peter'};
+// const members = [person];
+// person = null;
+// console.log(members); // [{name: 'peter'}]
+//==============================//
+//99
+// const person = {
+//     name : 'batman',
+//     age: 21,
+// };
+
+// for(const item in person){
+//     console.log(item); // name,age
+//     console.log(person[item]); //batman , 21
+// } 
+//==============================//
+//100
+// let data = 3+4+'5';
+// console.log(typeof data); // string;
+
+//==============================//
+//101
+// console.log(typeof 3+4+"5") // number45
+
+//==============================//
+//102
+// console.log(typeof (3+4+ +"5")); //number
+
+//==============================//
+//103
+
+//==============================//
+//104
+
