@@ -219,6 +219,81 @@
 
 //==============================//
 //35
-let data = "true";
-//convert data to boolean true value
-console.log(typeof !!data); //boolean
+// let data = "true";
+// //convert data to boolean true value
+// console.log(typeof !!data); //boolean
+
+//==============================//
+//36
+//differnce between map and forEach function
+// The forEach() method is used to loop through each element of an array or object. The forEach() method takes a callback function as an argument. The callback function is invoked for each element of the array or object.
+// The forEach() method is similar to the for loop, but it does not have a return value.
+// The map() method is similar to the forEach() method, but it returns a new array.
+
+//==============================//
+//37
+// let data = ['anil','peter','bruce'];
+// delete  data[1];
+// console.log(data) // ['anil', empty, 'bruce']
+// console.log(data.length) // 3
+
+//==============================//
+//38
+// merge two array
+// let a = [1,2,3];
+// let b = [4,5,6];
+// let c = [...a,...b];
+// console.log(c); //(6) [1, 2, 3, 4, 5, 6]
+
+//==============================//
+//39
+// let a = [1,2,3,4];
+// let b = [4,5,6];
+// let c = [...a,...b];
+// console.log(c); // [1, 2, 3, 4, 4, 5, 6]
+
+//==============================//
+//40
+// let c = 3 ** 3
+// console.log(c); // 27
+
+//==============================//
+//41
+// let a = 2;
+// setTimeout(()=>{
+//     console.log(a);  //100
+// },0)
+// a=100;
+
+//==============================//
+//42
+// let a = 2;
+// let A = 30;
+// console.log(A); //30
+//==============================//
+//43
+// let A10 = "like"; // it possible variable name
+// let 10A = 'like'; // it's not possible variable name because variable name are not start with numbers.
+// console.log(A10)
+
+//==============================//
+//44
+// let a = 'like';
+// let b =`like`;
+// console.log(a===b); //true
+//==============================//
+//45
+// let a = 1;
+// let b = 2;
+// console.log(--b === a); // true
+//==============================//
+//46
+
+//==============================//
+//47
+//==============================//
+//48
+//==============================//
+//49
+//==============================//
+//50
