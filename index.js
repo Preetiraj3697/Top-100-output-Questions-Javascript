@@ -744,14 +744,99 @@
 
 //==============================//
 //105
+// function getInfo(member){
+//     member.name = 'Anil';
+// };
+// const person = {name: 'Sarah'};
+// getInfo(person);
+// console.log(person); // {name: 'Anil'}
 //==============================//
 //106
+// function Car(){
+//     this.make = 'tata';
+//     return {make: 'Kia'};
+// }
+// const myCar = new Car();
+// console.log(myCar.make); // "Kia";
 //==============================//
 //107
+// (()=>{
+//     let x = (y=10);
+// })();
+// console.log(typeof x); //undefined;
 //==============================//
 //108
+// (()=>{
+//     let x = y = 10;
+// })();
+// console.log(typeof y); //number
 //==============================//
 //109
-
+// (()=>{
+//     let x = 10;
+// })();
+// (()=>{
+//     let x = 10;
+// })();
+// console.log(typeof x); //undefined;
 //==============================//
 //110
+// (()=>{
+//     let x = y =  10;
+// })();
+// (()=>{
+//     let x = y = 20;
+// })();
+// console.log(y);  // 20
+//==============================//
+//111
+// let x = 100;
+// (()=>{
+//     let x = 20;
+// })();
+// console.log(x); // 100
+//==============================//
+//112
+// console.log(!true-true); //-1
+//==============================//
+//113
+// console.log(true+ +"10"); //11
+//==============================//
+//========String interview Question==============//
+let str = "Hello, How are you";
+
+//convert str in only 1 array;
+// console.log(str.split()); or console.log([str]); // ['Hello, How are you']
+
+//convert string to array iwth each character
+// console.log(str.split("")); or console.log([...str]);  //['H', 'e', 'l', 'l', 'o', ',', ' ', 'H', 'o', 'w', ' ', 'a', 'r', 'e', ' ', 'y', 'o', 'u']
+
+//convert string to array with space or any sequence
+// console.log(str.split(" ")) // (4) ['Hello,', 'How', 'are', 'you']
+//  console.log(str.split('a')) // ['Hello, How ', 're you']
+
+// replace any character
+// console.log(str.replace('H',"P")) // Pello, How are you
+// console.log(str.replace("Hello","Hi"));  // Hi, How are you
+
+// Get substring from string
+// console.log(str.substring(6,10)) //  How
+
+// Remove First Character
+// console.log(str.substring(1,str.length)) // ello, How are you
+
+// Remove last Character
+// console.log(str.substring(0,str.length-1)) //Hello, How are yo
+
+// Remove string before specific character
+// let temp = str.split("o");
+// console.log(temp); // ['Hell', ', H', 'w are y', 'u']
+// console.log(temp[0]); // Hell
+
+//reverse string
+// let temp = str.split("").reverse().join("");
+// console.log(temp); //uoy era woH ,olleH
+
+// Remove extra space from both side;
+// let string = "    Hello World       "
+// console.log(string.trim())  // Hello World
