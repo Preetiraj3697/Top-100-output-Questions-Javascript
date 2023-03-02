@@ -327,6 +327,71 @@
 // fruit();
 //==============================//
 //54
-
+// console.log(+true); //1
+// console.log(typeof +true); // number
 //==============================//
 //55
+// console.log(!"anil"); //false
+// console.log(typeof("anil")); //string
+//==============================//
+//56
+// let data = 'size';
+// const bird = {
+//     size: 'small',
+// }
+// console.log(bird[data]); // small
+// console.log(bird["size"]); // small
+// console.log(bird.size); // small
+// console.log(bird.data); // undefined
+//==============================//
+//57
+// let c = {name:"peter"};
+// let d;
+// d = c;
+// c.name = 'anil'
+// console.log(d.name); //anil
+//==============================//
+//58
+// var x;
+// var x = 10;
+// console.log(x); //10
+//==============================//
+//59
+// var x;
+// let x = 10;
+// console.log(x); //Identifier 'x' has already been declared
+//==============================//
+//60
+// let a = 3;
+// let b = new Number(3);
+// console.log(a==b); //true
+// console.log(a===b); //false
+//==============================//
+//61
+// let name;
+// nmae = {}; //Typo!
+// console.log(name); // undefined; 
+//==============================//
+//62
+// let name;
+// nmae = {}; //Typo!
+// console.log(nmae); //{}
+//==============================//
+//63
+// function fruit(){
+//     console.log("Woof!"); //Woof!;
+// }
+// fruit.name = "apple";
+// fruit();
+//==============================//
+//64
+// function sum(a,b){
+//     return a+b;
+// }
+// console.log(sum(1,"2")); //12
+//==============================//
+//65
+// let number = 0;
+// console.log(number++); // 0
+// console.log(++number); // 2
+// console.log(number); // 2
