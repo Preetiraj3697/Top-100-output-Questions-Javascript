@@ -288,12 +288,45 @@
 // console.log(--b === a); // true
 //==============================//
 //46
-
+// let a = 1;
+// let b = 1;
+// let c = 2;
+// console.log(a === b === --c) //false
 //==============================//
 //47
+// console.log(3*3); // 9
+// console.log(3**3); //27
+// console.log(3***3); //Error unexpected token *
 //==============================//
 //48
+// console.log(a); //undefined;
+// var a;
 //==============================//
 //49
+// console.log(b); // b is not defined;
 //==============================//
 //50
+// console.log([[[[]]]]) 
+// [Array(1)]0: Array(1)0: Array(1)0: Array(0) // nested array
+//==============================//
+//51
+// how to find OS name
+// console.log(navigator.platform) // Win32
+//==============================//
+//52
+// let for = 100;
+// console.log(for); // Error :  for is reserver keyboard
+//==============================//
+//53
+// function fruit(){
+//     console.log(name); // undefined;
+//     console.log(price); // Error: Cannot access 'price' before initialization
+//     var name = 'apple';
+//     let price = 20;
+// };
+// fruit();
+//==============================//
+//54
+
+//==============================//
+//55
