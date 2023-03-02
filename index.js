@@ -840,3 +840,19 @@ let str = "Hello, How are you";
 // Remove extra space from both side;
 // let string = "    Hello World       "
 // console.log(string.trim())  // Hello World
+
+// var roles = {
+//     writer: {
+//      firstname: "Ravindu",
+//      lastname: "Shehan", 
+//      email: "ravindu@gmail.com"
+//     }, 
+//     reviewer: {
+//      firstname: "Ravindu",
+//      lastname: "Shehan", 
+//      email: "ravindu@gmail.com"
+//     }
+//   }
+  
+//   console.table (roles);
+  
