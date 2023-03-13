@@ -10,4 +10,8 @@
 // parameter is empty, the value "undefined" will be passed as its "this" value
 // Key Point
 // findIndex() does not execute the function for empty arrays.
-// findIndex() does not change the original array.
+// findIndex() does not change the original array. 
+
+let sports = ["cricket","Football","Chess","Hockey","Badminton","Tennis"];
+const index = sports.findIndex(item => item ==="Football");
+console.log('index: ', index);  // index:  1
