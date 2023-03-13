@@ -31,3 +31,16 @@ const num = [2,3];
 
 const arr5 = value.concat(1,num);
 console.log('arr5: ', arr5); // [1, 2, 3]
+
+// 4. concat alphanumeric value to array
+const alpha = ['a','b','c'];
+const numeric = [1,2,3];
+const aplphanumeric = alpha.concat(numeric);
+console.log('aplphanumeric : ', aplphanumeric ); // ['a', 'b', 'c', 1, 2, 3]
+
+
+// 5. concat nested array
+const arr6 = [[1]];
+const arr7 = [2,[3]];
+const arr8 = arr6.concat(arr7);
+console.log('arr8: ', arr8); // arr8:  (3) [Array(1), 2, Array(1)]
