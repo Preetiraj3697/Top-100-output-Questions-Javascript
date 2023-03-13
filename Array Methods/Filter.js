@@ -11,3 +11,21 @@
 // filter() does not execute the function for array elements without values.
 // filter() does not change the original array.
 
+let ages = [12,34,56,78,14,35];
+const checkAdult = age => age >= 20;
+console.log(ages.filter(checkAdult));  //  [34, 56, 78, 35]
+
+let sports = ["cricket","Football","Chess","Hockey","Badminton","Tennis"];
+
+const result = sports.filter(word => word.length>=6);
+console.log('result: ', result); //  ['cricket', 'Football', 'Hockey', 'Badminton', 'Tennis']
+
+let num = [1,2,3,4,5,6,7,8,9];
+const even = num.filter(num=>num%2==0);
+console.log('even: ', even); // even:  (4) [2, 4, 6, 8]
+
+let sports1 = ["Bat","Ball","Kit","Shoes","Hat"];
+const filterItem = (arr,query) => {
+    return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+}
+console.log("Search", filterItem(sports1,"ba")); // ['Bat', 'Ball']
