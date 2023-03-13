@@ -11,3 +11,22 @@
 // Key Point:=
 // forEach expects a synchronous function
 // forEach does not wait for promises.
+
+const arr = ["a","b","c"];
+arr.forEach(ele => console.log(ele)) // a b c
+
+// const arr1 = [2,3,4];
+// let sum = 0;
+// let sumFunc = (a,b) => a+b;
+
+// arr1.forEach((ele)=>sum = sumFunc(sum,ele));
+// console.log('sum: ', sum); // sum:  9
+
+const arr1 = [2,3,4];
+let sum = 0;
+let sumFunc = async (a,b) => a+b;
+
+arr1.forEach(async function(ele){
+    sum = await sumFunc(sum,ele);
+});
+console.log('sum: ', sum); // sum:  0
