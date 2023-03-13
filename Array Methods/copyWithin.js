@@ -7,3 +7,7 @@
 // Key point =>
 // Method will never add more item to array
 // Method overwrites the original array
+
+let sports = ["cricket","Football","Chess","Hockey"];
+sports.copyWithin(2,0);
+console.log('sports: ', sports); // ['cricket', 'Football', 'cricket', 'Football']
